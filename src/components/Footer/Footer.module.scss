@@ -1,0 +1,97 @@
+@use "../../styles/tools/rem";
+@use "../../styles/tools/media";
+@use "../../styles/settings/media-queries" as breakpoint;
+
+.footer {
+  background-color: var(--05);
+  color: var(--02);
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &__wrap {
+    max-width: rem.rem(1440);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem.rem(64);
+    padding: rem.rem(32);
+  }
+
+  a {
+    transition-property: color;
+    transition-duration: 250ms;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--03);
+      }
+    }
+  }
+
+  @include media.from(#{breakpoint.$media_1920}) {
+    &__wrap {
+      flex-direction: row;
+      gap: rem.rem(80);
+      padding-bottom: rem.rem(48);
+    }
+  }
+}
+
+.logo {
+  align-self: center;
+
+  @include media.from(#{breakpoint.$media_1920}) {
+    align-self: start;
+  }
+}
+
+.nav {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: rem.rem(24);
+
+  @include media.from(#{breakpoint.$media_1920}) {
+    display: flex;
+    gap: rem.rem(16);
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: rem.rem(8);
+
+  &--special {
+    grid-column: span 2;
+  }
+
+  @include media.from(#{breakpoint.$media_1920}) {
+    flex: 1 0 0;
+
+    &--special {
+      flex-grow: 1.45;
+    }
+  }
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: rem.rem(16);
+}
+
+.title {
+  color: var(--03);
+  text-transform: uppercase;
+  line-height: 162.5%;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  gap: rem.rem(8);
+  font-size: rem.rem(14);
+}
