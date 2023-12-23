@@ -40,19 +40,19 @@ export const Header = () => {
         <nav>
           <ul>
             <li>
-              <a href="#">Section</a>
+              <a href="/">Section</a>
             </li>
             <li>
-              <a href="#">Section</a>
+              <a href="/">Section</a>
             </li>
             <li>
-              <a href="#">Section</a>
+              <a href="/">Section</a>
             </li>
             <li>
-              <a href="#">Section</a>
+              <a href="/">Section</a>
             </li>
             <li>
-              <a href="#">Section</a>
+              <a href="/">Section</a>
             </li>
           </ul>
         </nav>

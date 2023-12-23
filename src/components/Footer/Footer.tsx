@@ -10,7 +10,7 @@ export const Footer = () => {
         <Logo className={styles.logo} />
         <nav className={styles.nav}>
           <div className={styles.col}>
-            <Heading level="h5">Lorem ipsum</Heading>
+            <Heading level="h3">Lorem ipsum</Heading>
             <ul className={styles.ul}>
               <li>
                 <a href="/">Section</a>
@@ -30,7 +30,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className={styles.col}>
-            <Heading level="h5">Lorem ipsum</Heading>
+            <Heading level="h3">Lorem ipsum</Heading>
             <ul className={styles.ul}>
               <li>
                 <a href="/">Section</a>
@@ -41,7 +41,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className={classNames(styles.col, styles["col--special"])}>
-            <Heading level="h5">Lorem ipsum</Heading>
+            <Heading level="h3">Lorem ipsum</Heading>
             <div className={styles.subgrid}>
               <div className={styles.col}>
                 <span className={styles.title}>Title</span>
@@ -86,7 +86,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className={styles.col}>
-            <Heading level="h5">Lorem ipsum</Heading>
+            <Heading level="h3">Lorem ipsum</Heading>
             <ul className={styles.ul}>
               <li>
                 <a href="/">Section</a>
@@ -106,7 +106,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className={styles.col}>
-            <Heading level="h5">Lorem ipsum</Heading>
+            <Heading level="h3">Lorem ipsum</Heading>
             <ul className={styles.ul}>
               <li>
                 <a href="/">Section</a>
@@ -126,7 +126,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className={styles.col}>
-            <Heading level="h5">Lorem ipsum</Heading>
+            <Heading level="h3">Lorem ipsum</Heading>
             <ul className={styles.ul}>
               <li>
                 <a href="/">Section</a>
