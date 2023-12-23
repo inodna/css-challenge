@@ -5,6 +5,7 @@ import { classNames } from "../../utils/classNames";
 
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
   const bodyRef = useRef(document.body);
 
   const handleClick = () => {
@@ -31,9 +32,35 @@ export const Header = () => {
     };
   }, [isNavOpen, bodyRef]);
 
+  useEffect(() => {
+    let prevScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < prevScrollY) {
+        setIsScrollingUp(true);
+      } else {
+        setIsScrollingUp(false);
+      }
+
+      prevScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      className={classNames(styles.header, isNavOpen ? styles.isActive : "")}
+      className={classNames(
+        styles.header,
+        isNavOpen ? styles.isActive : "",
+        isScrollingUp ? styles.up : styles.down
+      )}
     >
       <div className={styles["header__wrap"]}>
         <Logo />

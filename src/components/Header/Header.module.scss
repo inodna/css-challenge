@@ -3,7 +3,13 @@
 @use "../../styles/settings/media-queries" as breakpoint;
 
 .header {
+  background-color: var(--06);
   padding: rem.rem(16);
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--header-height);
+  transition-property: top;
+  transition-duration: 250ms;
 
   &__wrap {
     display: flex;
@@ -16,8 +22,8 @@
   nav {
     background-color: var(--06);
     position: fixed;
-    inset: auto 0 0 0;
-    height: calc(100vh - var(--header-height));
+    inset: var(--header-height) 0 0 0;
+    height: calc(100lvh - var(--header-height));
     padding: rem.rem(16);
     transform: translateX(100%);
     transition-property: transform, opacity;
@@ -52,8 +58,18 @@
     }
   }
 
+  &.up {
+    top: 0;
+  }
+
+  &.down {
+    top: calc(var(--header-height) * -1);
+  }
+
   @include media.from(#{breakpoint.$media_desktop}) {
+    background-color: transparent;
     padding-inline: rem.rem(32);
+    position: static;
 
     &__wrap {
       gap: rem.rem(80);
@@ -78,6 +94,11 @@
 
     .button {
       display: none;
+    }
+
+    &.up,
+    &.down {
+      top: unset;
     }
   }
 }
