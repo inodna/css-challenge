@@ -1,28 +1,28 @@
-import * as Tabs from "@radix-ui/react-tabs";
+import * as TabsRadix from "@radix-ui/react-tabs";
 import Image from "../../assets/rectangle-471.webp";
 import styles from "./Tabs.module.scss";
 import Heading from "../Heading/Heading";
 
-export const Tabs2 = () => (
-  <Tabs.Root className={styles.tabs} defaultValue="tab1">
+export const Tabs = () => (
+  <TabsRadix.Root className={styles.tabs} defaultValue="tab1">
     <nav className={styles["tabs__nav"]}>
       <Heading level="h2">Lorem ipsum dolor sit amet</Heading>
-      <Tabs.List
+      <TabsRadix.List
         className={styles["tabs__list"]}
         aria-label="Lorem ipsum dolor sit amet"
       >
-        <Tabs.Trigger className={styles.button} value="tab1">
+        <TabsRadix.Trigger className={styles.button} value="tab1">
           Lorem ipsum
-        </Tabs.Trigger>
-        <Tabs.Trigger className={styles.button} value="tab2">
+        </TabsRadix.Trigger>
+        <TabsRadix.Trigger className={styles.button} value="tab2">
           Lorem ipsum
-        </Tabs.Trigger>
-        <Tabs.Trigger className={styles.button} value="tab3">
+        </TabsRadix.Trigger>
+        <TabsRadix.Trigger className={styles.button} value="tab3">
           Lorem ipsum
-        </Tabs.Trigger>
-      </Tabs.List>
+        </TabsRadix.Trigger>
+      </TabsRadix.List>
     </nav>
-    <Tabs.Content className={styles["tabs__content"]} value="tab1">
+    <TabsRadix.Content className={styles["tabs__content"]} value="tab1">
       <img
         src={Image}
         alt="A laptop turned on half open"
@@ -35,8 +35,8 @@ export const Tabs2 = () => (
         diam habitasse tristique morbi tempus. Auctor semper diam dignissim
         turpis nisl ultricies tellus mi. Metus.
       </p>
-    </Tabs.Content>
-    <Tabs.Content className={styles["tabs__content"]} value="tab2">
+    </TabsRadix.Content>
+    <TabsRadix.Content className={styles["tabs__content"]} value="tab2">
       <img
         src={Image}
         alt="A laptop turned on half open"
@@ -49,8 +49,8 @@ export const Tabs2 = () => (
         diam habitasse tristique morbi tempus. Auctor semper diam dignissim
         turpis nisl ultricies tellus mi. Metus.
       </p>
-    </Tabs.Content>
-    <Tabs.Content className={styles["tabs__content"]} value="tab3">
+    </TabsRadix.Content>
+    <TabsRadix.Content className={styles["tabs__content"]} value="tab3">
       <img
         src={Image}
         alt="A laptop turned on half open"
@@ -63,6 +63,6 @@ export const Tabs2 = () => (
         diam habitasse tristique morbi tempus. Auctor semper diam dignissim
         turpis nisl ultricies tellus mi. Metus.
       </p>
-    </Tabs.Content>
-  </Tabs.Root>
+    </TabsRadix.Content>
+  </TabsRadix.Root>
 );

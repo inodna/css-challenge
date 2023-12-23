@@ -5,9 +5,16 @@ import Heading from "./components/Heading/Heading";
 import { Main } from "./components/Main/Main";
 import { Section } from "./components/Section/Section";
 import { Tag } from "./components/Tag/Tag";
-import a from "./assets/section-01.svg";
+import Image from "./assets/section-01.svg";
+import { useMediaQuery } from "react-responsive";
+import { Tabs } from "./components/Tabs/Tabs";
+import { Accordion } from "./components/Accordion/Accordion";
 
 function App() {
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1280px)",
+  });
+
   return (
     <>
       <Header />
@@ -27,11 +34,14 @@ function App() {
             <Button>Button</Button>
           </div>
           <img
-            src={a}
+            src={Image}
             alt="A mobile phone held by one hand"
             width="648"
             height="500"
           />
+        </Section>
+        <Section variant={"section--02"}>
+          {isDesktop ? <Tabs /> : <Accordion />}
         </Section>
       </Main>
       <Footer />
