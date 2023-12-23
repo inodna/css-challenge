@@ -1,0 +1,3 @@
+- Install dependencies `npm i`
+- Run `npm run build`
+- Finally `npm run preview`
