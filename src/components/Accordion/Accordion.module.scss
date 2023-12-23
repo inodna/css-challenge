@@ -1,0 +1,73 @@
+@use "../../styles/tools/rem";
+
+.heading {
+  + * {
+    margin-top: rem.rem(32);
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: rem.rem(16);
+}
+
+.active {
+  .button {
+    background-color: var(--05);
+
+    &__icon {
+      transform: rotate(90deg);
+    }
+  }
+
+  .article__content {
+    max-height: 100vh;
+    opacity: 1;
+    padding: rem.rem(16);
+  }
+}
+
+.article {
+  border: 1px solid var(--03);
+  border-radius: 8px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: rem.rem(16);
+    text-align: center;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition-property: opacity, max-height, padding;
+    transition-duration: 250ms;
+  }
+
+  &__img {
+    border-radius: 18px;
+    margin-inline: auto;
+    height: auto;
+  }
+}
+
+.button {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  color: var(--02);
+  display: flex;
+  justify-content: space-between;
+  font-size: rem.rem(18);
+  font-weight: 700;
+  gap: rem.rem(16);
+  line-height: 133.333%;
+  width: 100%;
+  padding: rem.rem(16);
+  transition-property: background-color;
+  transition-duration: 250ms;
+
+  &__icon {
+    transition-property: transform;
+    transition-duration: 250ms;
+  }
+}
