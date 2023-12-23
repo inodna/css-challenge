@@ -1,0 +1,19 @@
+@use "../../styles/tools/rem";
+
+.button {
+  background-color: var(--04);
+  border-radius: 16px;
+  color: var(--05);
+  font-size: rem.rem(18);
+  font-weight: 700;
+  line-height: calc(24 / 18);
+  padding: rem.rem(16) rem.rem(32);
+  transition-property: background-color;
+  transition-duration: 250ms;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--02);
+    }
+  }
+}
