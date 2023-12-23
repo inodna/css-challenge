@@ -1,0 +1,38 @@
+@use "../../styles/tools/rem";
+@use "../../styles/tools/media";
+@use "../../styles/settings/media-queries" as breakpoint;
+
+.section {
+  padding: rem.rem(32);
+  text-align: center;
+
+  &--01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem.rem(64);
+
+    > div {
+      * + * {
+        margin-top: rem.rem(32);
+      }
+    }
+  }
+
+  @include media.from(#{breakpoint.$media_desktop}) {
+    padding-block: rem.rem(64);
+    text-align: left;
+
+    &--01 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: rem.rem(80);
+
+      > div {
+        * + button {
+          margin-top: rem.rem(64);
+        }
+      }
+    }
+  }
+}
