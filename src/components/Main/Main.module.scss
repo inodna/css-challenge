@@ -1,3 +1,7 @@
+@use "../../styles/tools/rem";
+
 .main {
+  margin-inline: auto;
+  max-width: rem.rem(1440);
   min-height: calc(100dvh - 80px);
 }
