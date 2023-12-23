@@ -17,6 +17,10 @@
         margin-top: rem.rem(32);
       }
     }
+
+    > img {
+      height: auto;
+    }
   }
 
   @include media.from(#{breakpoint.$media_desktop}) {
