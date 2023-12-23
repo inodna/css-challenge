@@ -1,5 +1,9 @@
+import Heading from "./components/Heading/Heading";
+
 function App() {
-  return <h1>Lorem ipsum dolor sit amet consectetur adipis</h1>;
+  return (
+    <Heading level="h1">Lorem ipsum dolor sit amet consectetur adipis</Heading>
+  );
 }
 
 export default App;

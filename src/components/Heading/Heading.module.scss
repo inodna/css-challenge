@@ -1,0 +1,23 @@
+@use "../../styles/tools/rem";
+
+.h1 {
+  font-size: rem.rem(48);
+}
+
+.h2 {
+  font-size: rem.rem(36);
+}
+
+.h3 {
+  font-size: rem.rem(24);
+}
+
+.h4 {
+  font-size: rem.rem(18);
+  line-height: 133.333%;
+}
+
+.h5 {
+  font-size: rem.rem(16);
+  line-height: 125%;
+}
