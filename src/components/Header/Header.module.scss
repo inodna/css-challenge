@@ -3,8 +3,6 @@
 @use "../../styles/settings/media-queries" as breakpoint;
 
 .header {
-  --header-height: #{rem.rem(80)};
-
   padding: rem.rem(16);
 
   &__wrap {
