@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import styles from "./Main.module.scss";
 
 interface MainProps {
-  children: string | JSX.Element;
+  children: ReactNode;
 }
 
 export const Main = ({ children }: MainProps) => {
