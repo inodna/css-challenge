@@ -1,4 +1,11 @@
+@use "../settings/colors";
+
+:root {
+  @include colors.colors;
+}
+
 body {
+  color: var(--01);
   font-family: Montserrat, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
