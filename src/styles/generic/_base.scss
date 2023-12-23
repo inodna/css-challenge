@@ -13,8 +13,11 @@ body {
   font-family: Montserrat, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 162.5%;
+  padding-top: var(--header-height);
 
   @include media.from(#{breakpoint.$media_desktop}) {
+    padding-top: 0;
+
     &::before {
       content: "";
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTk3IiBoZWlnaHQ9IjM0OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjYzLTEwM2MwLTkuOTQxLTguMDU5LTE4LTE4LTE4SDkwYy00NC4xODMgMC04MCAzNS44MTctODAgODB2ODNjMCA0NC4xODMgMzUuODE3IDgwIDgwIDgwaDIzbC42MjYtLjAwMUMxMzAuMzY0IDEyMS45MyAxNDYgMTM0LjI2MyAxNDYgMTUxYzAgOTAuNTc1IDczLjQyNSAxNjQgMTY0IDE2NGgxNzljOTIuMjMyIDAgMTY3LTc0Ljc2OCAxNjctMTY3Vi01YzAtNDQuMTgzLTM1LjgxNy04MC04MC04MEgyODFjLTkuOTQxIDAtMTgtOC4wNTktMTgtMThaIiBmaWxsPSJ1cmwoI2IpIi8+PC9nPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9Ii0xNjQuMDA4IiB5MT0iLTM3Ni45OTYiIHgyPSIyODkuNDc3IiB5Mj0iNTAzLjcyNCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiM3NzU2REIiLz48c3RvcCBvZmZzZXQ9Ii43NiIgc3RvcC1jb2xvcj0iIzNCRjRERSIvPjwvbGluZWFyR3JhZGllbnQ+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDU5N3YzNDlIMHoiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=");
