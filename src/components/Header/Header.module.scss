@@ -37,8 +37,6 @@
     display: inline-block;
     font-weight: 700;
     line-height: 125%;
-    transition-property: color;
-    transition-duration: 250ms;
 
     @media (hover: hover) {
       &:hover {
@@ -54,7 +52,7 @@
     }
   }
 
-  @include media.from(#{breakpoint.$media_1920}) {
+  @include media.from(#{breakpoint.$media_desktop}) {
     padding-inline: rem.rem(32);
 
     &__wrap {
