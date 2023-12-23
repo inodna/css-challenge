@@ -61,6 +61,7 @@
     }
 
     nav {
+      background-color: transparent;
       height: auto;
       inset: auto;
       opacity: 1;
@@ -68,6 +69,7 @@
       padding: 0;
       position: relative;
       transform: none;
+      transition: none;
     }
 
     ul {
