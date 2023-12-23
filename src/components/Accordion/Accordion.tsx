@@ -6,7 +6,7 @@ import Chevron from "../../assets/chevron.svg";
 import styles from "./Accordion.module.scss";
 
 export const Accordion = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(1);
 
   const handleButtonClick = (index: number | null) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
